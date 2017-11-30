@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/*!
+ * 
+ * 盛邦升华
+ * 
+*/
+/* 
+ * css reset | v2.0
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  width: 960px;
+  margin: auto; }
+
+.header {
+  margin-bottom: 50px; }
+
+.video {
+  font-size: 24px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #bbb;
+  padding-bottom: 6px; }
+  .video span {
+    border-bottom: 2px solid #ec4828;
+    padding-bottom: 3px; }
+  .video a {
+    text-decoration: none;
+    color: #000; }
+  .video .i-video {
+    background-image: url(/img/video.jpg);
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-right: 5px; }
+  .video small {
+    font-size: 16px;
+    color: #bbb; }
+
+.menu {
+  margin-bottom: 10px; }
+  .menu li {
+    display: inline-block;
+    margin-right: 10px; }
+  .menu a {
+    text-decoration: none;
+    padding: 10px 0;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+    display: inline-block;
+    color: #000; }
+    .menu a:hover {
+      color: #ec4828; }
+
+.v-video {
+  margin-left: -10px;
+  margin-right: -10px; }
+
+.v-video .col-md-3 {
+  width: 25%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.v-video .image {
+  background-color: #ec4828;
+  width: 100%;
+  height: 80px;
+  position: relative;
+  border: 4px solid transparent; }
+
+.v-video .image:hover {
+  border-color: #3a3a3a; }
+
+.v-video .v-button {
+  height: 20px;
+  width: 20px;
+  background-image: url(../img/video.png);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px; }
+
+.v-video.v-1 .image {
+  background-color: #d9d9d9; }
+
+.v-video.v-2 .image {
+  background-color: #ebd7c7; }
+
+.v-video.v-3 .image {
+  background-color: #ebbc96; }
+
+.v-video.v-4 .image {
+  background-color: #db97b3; }
+
+.v-video.v-5 .image {
+  background-color: #917480; }
+
+.v-video.v-1 {
+  display: block; }
+
+.v-video.v-2 {
+  display: none; }
+
+.v-video.v-3 {
+  display: none; }
+
+.v-video.v-4 {
+  display: none; }
+
+.v-video.v-5 {
+  display: none; }
+
+/*.menu li:first-child a{
+    color:orange;
+}*/
+.menu li a.active {
+  border-bottom: 2px solid #ec4828; }
