@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #nav li{
+            width: 100px;
+            height: 50px;
+            border: 1px solid red;
+            color: #000;
+            float: left;
+            list-style: none;
+            line-height: 50px;
+            text-align: center;
+        }
+        #big li{
+            width: 100px;
+            height: 50px;
+            border: 1px solid pink;
+            color: #000;
+            list-style: none;
+            line-height: 50px;
+            text-align: center;
+            clear: both;
+        }
+        #big{
+            height:0px;
+            overflow: hidden;transition:0.3s;clear: both;
+        }
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ul id="big">
+        <li>3</li>
+        <li>4</li>
+        <li>4</li>
+    </ul>
+    <script>
+        var nav=document.querySelector("#nav");
+        var big=document.querySelector("#big");
+        var nli=document.querySelectorAll("#nav li");
+        var bli=document.querySelectorAll("#big li");
+        nli[0].onmouseover=function(){
+            big.style.height="150px"
+        }
+        nli[0].onmouseout=function(){
+            big.style.height="0px"
+        }
+
+    </script>
+</body>
+</html>

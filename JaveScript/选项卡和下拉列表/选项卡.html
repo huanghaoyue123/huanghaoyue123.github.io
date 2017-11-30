@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box div{
+            width: 300px;
+            height: 200px;
+            background: green;
+            border: 1px solid red;
+            float: left;
+            text-align: center;
+            line-height: 200px;
+        }
+        .big div{
+            width: 904px;
+            height: 400px;
+            border: 1px solid red;
+            clear: both;
+        }
+        #f2{
+            display: none;
+        }
+        #f3{
+            display: none;
+        }
+        #s1{
+            background: red;
+        }
+        /*.box div:hover{
+            background: red;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="s1">0</div>
+        <div id="s2">1</div>
+        <div id="s3">2</div>
+    </div>
+    <div class="big">
+        <div id="f1">3</div>
+        <div id="f2">4</div>
+        <div id="f3">5</div>
+    </div>
+</body>
+<script>
+    var sml = document.querySelectorAll(".box div");
+    var big = document.querySelectorAll(".big div");
+    for(var i=0;i<sml.length;i++){
+        sml[i].onclick=function(){
+            for(var i=0;i<big.length;i++){
+                if(sml[i]==this){
+                    sml[i].style.background="red";
+                    big[i].style.display="block";
+                }else{
+                    sml[i].style.background="green";
+                    big[i].style.display="none";
+                }
+            }
+        }
+    }
+</script>
+</html>
