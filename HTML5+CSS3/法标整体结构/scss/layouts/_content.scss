@@ -1,0 +1,64 @@
+.my-tab {
+  margin-bottom: 100px;
+}
+
+//卫浴10大品牌
+.top10 {
+  margin-bottom: 100px;
+}
+
+//卫浴加盟
+.jiameng {
+
+  .progress {
+    height: 60px;
+    .progress-bar {
+      line-height: 60px;
+      position: relative;
+      &:hover{
+        color: #ffffff;
+      }
+      i {
+        position: absolute;
+        right: -35px;
+        font-size: 120px;
+        top: 50%;
+        margin-top: -60px;
+        z-index: 1000;
+        color: #000000;
+      }
+      @media(max-width:720px){
+        i{
+          position: relative;
+          right:0;
+          top:0;
+          font-size: 12px;
+          color: #fff!important;
+        }
+      }
+    }
+    .progress-bar-success i {
+      color: #5cb85c;
+    }
+    .progress-bar-info i {
+      color: #5bc0de;
+    }
+    .progress-bar-warning i {
+      color: #f0ad4e;
+    }
+    .progress-bar-danger i {
+      color: #d9534f;
+    }
+  }
+}
+
+
+
+//厂家介绍
+
+.changjia{
+  img{
+    width: 100%;
+    margin-bottom:15px;
+  }
+}

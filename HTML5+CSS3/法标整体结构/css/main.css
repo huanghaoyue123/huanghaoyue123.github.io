@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*! 盛邦升华 */
+.navbar {
+  margin-bottom: 0; }
+
+/*轮播图*/
+.slide1 {
+  height: 100vh;
+  margin-bottom: 50px; }
+  .slide1 .item {
+    height: 100vh; }
+    .slide1 .item .carousel-caption {
+      bottom: auto;
+      top: 50%; }
+  .slide1 .item0 {
+    background-image: url("../img/s0.jpg"); }
+  .slide1 .item1 {
+    background-image: url("../img/s1.jpg"); }
+  .slide1 .item2 {
+    background-image: url("../img/s2.jpg"); }
+  .slide1 .item3 {
+    background-image: url("../img/s3.jpg"); }
+  .slide1 .item4 {
+    background-image: url("../img/s4.jpg"); }
+
+.my-tab {
+  margin-bottom: 100px; }
+
+.top10 {
+  margin-bottom: 100px; }
+
+.jiameng .progress {
+  height: 60px; }
+  .jiameng .progress .progress-bar {
+    line-height: 60px;
+    position: relative; }
+    .jiameng .progress .progress-bar:hover {
+      color: #ffffff; }
+    .jiameng .progress .progress-bar i {
+      position: absolute;
+      right: -35px;
+      font-size: 120px;
+      top: 50%;
+      margin-top: -60px;
+      z-index: 1000;
+      color: #000000; }
+    @media (max-width: 720px) {
+      .jiameng .progress .progress-bar i {
+        position: relative;
+        right: 0;
+        top: 0;
+        font-size: 12px;
+        color: #fff !important; } }
+  .jiameng .progress .progress-bar-success i {
+    color: #5cb85c; }
+  .jiameng .progress .progress-bar-info i {
+    color: #5bc0de; }
+  .jiameng .progress .progress-bar-warning i {
+    color: #f0ad4e; }
+  .jiameng .progress .progress-bar-danger i {
+    color: #d9534f; }
+
+.changjia img {
+  width: 100%;
+  margin-bottom: 15px; }
