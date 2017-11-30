@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> </head>
+
+<body>
+    <banner>
+        <div class="container">
+            <div class="yun"> <img src="images/yun.png" alt=""> </div>
+            <div class="che"> <img src="images/che.png" alt="">
+                <div class="lun"> <img src="images/lun.png" alt=""> </div>
+                <div class="lun1"> <img src="images/lun.png" alt=""> </div>
+            </div>
+        </div>
+    </banner>
+    <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script>
+        $(".che").html(function () {
+            $(".che").animate({
+                "margin-left": "10000px"
+            }, 30000)
+        })
+        
+        $(".yun").html(function () {
+            $(".yun").animate({
+                "margin-left": "1000px"
+                , "opacity": "0"
+            }, 15000)
+        })
+    </script>
+</body>
+
+</html>
