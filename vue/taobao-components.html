@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+            width: 20%;
+            padding: 0 49px;
+            float: left;
+            border: 1px solid #f4f4f4;
+        }
+        li:nth-of-type(1){
+            border-left: 1px solid #fff;
+        }
+        li:nth-of-type(5){
+            border-right: 1px solid #fff;
+        }
+        li:nth-of-type(6){
+            border-left: 1px solid #fff;
+        }
+        li:nth-of-type(10){
+            border-right: 1px solid #fff;
+        }
+        li:hover{
+            border: 1px solid #ff5000;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+        .text img{
+            width: 28px;
+            height: 16px;
+        }
+        .text{
+            color: #666;
+            font-size: 17px;
+        }
+        .text1{
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .text1 a{
+            color: #999;
+        }
+        .comment{
+            margin-left:10px;
+        }
+        .text2{
+            color: #999;
+            font-size: 11px;
+            margin-left: 40px;
+        }
+        .text3{
+            color: #ff5000;
+            font-size: 22px;
+        }
+        .text3 span{
+            font-size: 11px;
+        }
+        .text4{
+            color: #999;
+            font-size: 11px;
+        }
+        .text5{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <sbsh v-for="list in lists" v-bind:url="list.url" v-bind:postfree="list.postfree" v-bind:num="list.num" v-bind:num1="list.num1" v-bind:price="list.price" v-bind:cost="list.cost" v-bind:sales="list.sales"></sbsh>
+    </ul>
+    <script src="vue.js"></script>
+    <script>
+        Vue.component('sbsh',{
+            props:["url","postfree","num","num1","price","cost","sales"],
+            template:`<li>
+            <a href="" v-bind:title="postfree"><img v-bind:src="url" alt=""></a>
+            <a href="" class="text" v-bind:title="postfree">
+                <img src="img/2.png" alt="">
+                {{postfree}}
+            </a>
+            <div class="text1">
+                <a href="">评价 {{num}}</a>
+                <a href="" class="comment">收藏 {{num1}}</a>
+            </div>
+            <div class="text5">
+                <a href="" class="text3"><span>￥</span>{{price}}</a>
+                <a href="" class="text4"><span>￥</span>{{cost}}</a>
+                <a href="" class="text2">月销 {{sales}}笔</a>
+            </div>
+        </li>`
+        })
+        var app=new Vue({
+            el:"ul",
+            data:{
+                lists:[
+                    {url:"img/1.jpg_.webp",postfree:"冬季雪地靴女短靴棉鞋学生韩版加绒高帮保暖",num:0,num1:138658,price:59,cost:118,sales:11132},
+                    {url:"img/2.jpg_.webp",postfree:"秋冬新款毛衣女宽松套头短款灯笼袖圆领长袖",num:10122,num1:84662,price:89,cost:169,sales:19735},
+                    {url:"img/3.jpg_.webp",postfree:"一对很好看的鹿",num:0,num1:3136,price:88,cost:176,sales:32},
+                    {url:"img/4.jpg_.webp",postfree:"毛衣女套头韩版加厚假两件上衣针织打底衫",num:15300,num1:151814,price:62,cost:129,sales:35062},
+                    {url:"img/5.jpg_.webp",postfree:"圆领女装宽松时尚打底针织衫短款长袖套头",num:1456,num1:39960,price:69,cost:158,sales:6370},
+                    {url:"img/6.jpg_.webp",postfree:"马丁靴女英伦风2017秋冬新款学生厚底短靴潮",num:2377,num1:60068,price:158,cost:308,sales:10740},
+                    {url:"img/7.jpg_.webp",postfree:"马丁靴女短靴冬鞋2017新款百搭韩版学生欧美",num:3491,num1:31194,price:128,cost:496,sales:6537},
+                    {url:"img/8.jpg_.webp",postfree:"复古松糕厚底原宿马丁靴女英伦风秋冬季加绒",num:0,num1:72040,price:167.2,cost:488,sales:12003},
+                    {url:"img/9.jpg_.webp",postfree:"涉趣平底马丁靴女2017新款马丁鞋复古小短靴",num:1334,num1:47986,price:179,cost:588,sales:4608},
+                    {url:"img/10.jpg_.webp",postfree:"两瓶立减5元 韩国原装进口柚子茶1kg",num:965,num1:1582,price:52.9,cost:78,sales:266}
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>

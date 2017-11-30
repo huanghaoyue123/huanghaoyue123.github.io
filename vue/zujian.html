@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li{
+            float: left;
+            list-style: none;
+            width: 255px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <my-li v-for="life in lifes" v-bind:key="life.id" v-bind:tit="life.tit" v-bind:text="life.text" v-bind:hot="life.hot"></my-li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        Vue.component('my-li',{
+            props:["tit","text","hot"],
+            template:`<li>
+                <h4>{{tit}}</h4>
+                <p>{{text}}</p>
+                <p>人气{{hot}}</p>
+            </li>`
+        })
+        var app = new Vue({
+            el:"#app",
+            data:{
+                lifes:[
+                    {id:0,tit:"超级买手",text:"专注买买买",hot:"560639"},
+                    {id:1,tit:"怕冷星人",text:"过冬必杀技",hot:"4620822"},
+                    {id:2,tit:"豆蔻少女",text:"元气满满的你",hot:"5257150"},
+                    {id:3,tit:"家有萌娃",text:"宝贝快快长大",hot:"2287127"},
+                    {id:4,tit:"华丽上班族",text:"职场升职记",hot:"1576180"},
+                    {id:5,tit:"户外运动控",text:"一直在路上",hot:"775084"}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

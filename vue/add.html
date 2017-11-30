@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+    <div id="app">
+     <input type="text" v-model="message">
+      <button v-on:click="logMessage">按钮</button>
+       <p v-show="welcome" v-bind:title="tit">
+           {{message}}
+       </p>
+        
+    </div>
+-->
+   <div id="app">
+      <input type="text" v-model="message" @keyup.enter="eve" placeholder="水果名字">
+      <input type="text" v-model="num" placeholder="个数" @keyup.enter="eve">
+      <button v-on:click="eve">按钮</button>
+       <ol>
+           <my-li v-bind:key="list.id" v-for="list in lists" v-bind:text="list.name" v-bind:num="list.num"></my-li>
+       </ol>
+   </div>
+    <script src="vue.js"></script>
+    <script>
+        
+//        var app=new Vue({
+//            el:"#app",
+//            data:{
+//                message:"Hello",
+//                tit:"Hello",
+//                welcome:true
+//            },
+//            methods:{
+//                logMessage:function(){
+//                    alert(this.message)
+//                }
+//            }
+//        })
+//        app.message="您好"
+        Vue.component('my-li',{
+            props:["text","num"],
+            template:'<li>{{text}} {{num}}个</li>'
+        })
+        var app=new Vue({
+            el:"#app",
+            data:{
+                num:"",
+                message:"",
+                lists:[
+                    {id:0,name:"香蕉",num:"1"},
+                    {id:1,name:"苹果",num:"2"},
+                    {id:2,name:"鸭梨",num:"3"}
+                ]
+            },
+            methods:{
+                eve:function(){
+                    if(this.message&&this.num!==""){
+                        this.lists.push({name:this.message,id:this.lists.length,num:this.num});
+                        this.message="";
+                        this.num="";
+                    }else{
+                        alert("请输入内容");
+                    }
+                }
+            }
+        })
+//        app.lists.push({name:"芒果"})
+    </script>
+</body>
+</html>

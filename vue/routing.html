@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--   路由:不同组件之间进行切换，不需要刷新-->
+   <div id="app">
+       <router-link to="/">首页</router-link>
+       <router-link to="/events">活动</router-link>
+<!--       显示组件-->
+       <router-view></router-view>
+   </div>
+    <script src="vue.js"></script>
+    <script src="vue-router.js"></script>
+    <script>
+//        组件
+        const Home={
+            template:'<h2>首页</h2>'
+        }
+        const Event={
+            template:'<h2>活动</h2>'
+        }
+//        const只能写一个
+//        配置信息
+        const routes=[
+            {path:'/',component:Home},
+            {path:"/events",component:Event}
+        ]
+//        Vue的路由实例
+        const router=new VueRouter({
+//            调用上面的数据
+            routes
+        })
+        const app=new Vue({
+            el:"#app",
+            router
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style></style>
+</head>
+<body>
+   <div id="app">
+       {{message}}
+<!--       不会再跳href-->
+       <a v-bind:href="url" v-on:click.prevent.once="eve">链接</a>
+       <img v-bind:src="src" v-bind:alt="alt">
+<!--       事件修饰符:once事件只生效一次-->
+       <button v-on:click.once="eve">按钮</button>
+<!--       事件修饰符：v-on:keyup键盘事件当按下回车键的时候才发生e事件-->
+       <input v-on:keyup.enter="e">
+<!--       事件修饰符-->
+       <button v-on:click.ctrl="e">按钮</button>
+       <button v-on:click.ctrl.up="e">1</button>
+   </div>
+   
+   
+   
+   <div id="app1">
+       <input v-model="text">
+       {{text}}
+       <ul>
+           <li v-for="f in fs"><a href="">{{f.name}}</a></li>
+       </ul>
+       <p v-if="seen==='a'">a</p>
+       <p v-else-if="seen===b">b</p>
+       <p v-else>Not a/b</p>
+   </div>
+   
+   
+   <div id="app2">
+<!--       计算属性-->
+  {{fullname}}
+   </div>
+   
+   
+   <div id="app3">
+       <p v-bind:class="classObject">段落</p>
+       <button v-on:click="e">按钮</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+                message:"hello Vue!",
+                url:"http://www.qq.com",
+                src:"pic/logo.png",
+                alt:"图片1"
+            },
+            methods:{
+                eve:function(){
+                    console.log("hello Vue!")
+                },
+                e:function(){
+                    alert("hello Vue!")
+                }
+            }
+        })
+        
+        
+        var app1=new Vue({
+            el:"#app1",
+            data:{
+                text:"hello Vue!",
+                fs:[
+                    {name:"苹果",},
+                    {name:"香蕉",},
+                    {name:"鸭梨",}     
+                ],
+                seen:"g"
+            }
+        })
+        
+        
+        var app2=new Vue({
+            el:"#app2",
+            data:{
+                xiaoming:"小明",
+                xiaohong:"小红",
+            },
+//            计算属性
+            computed:{
+                fullname:function(){
+                    return this.xiaoming+"和"+this.xiaohong
+                }
+            }
+        })
+        
+        
+        var app3=new Vue({
+            el:"#app3",
+            data:{
+                classObject:{
+                    h:true,
+                }
+            },
+            methods:{
+                e:function(){
+                    this.classObject.h=false
+                }
+            }
+        })
+    </script>
+</body>
+</html>
