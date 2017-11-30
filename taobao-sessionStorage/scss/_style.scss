@@ -1,0 +1,88 @@
+//Reset CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+//淘宝网选项卡
+.notice {
+  //调试样式开始
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  //调试样式结束
+  width: 290px;
+  padding: 0 10px;
+  background-color: #fff;
+  font-size: 12px;
+  font-family: 新宋体;
+  .nav {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  ul {
+    list-style: none;
+  }
+  ul::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  li {
+    float: left;
+  }
+  .nav ul {
+
+    width: 255px;
+    margin: auto;
+  }
+  .nav a {
+    width: 39px;
+    color: #3c3c3c;
+    padding-bottom: 4px;
+    margin: 0 6px;
+    border-bottom: 2px solid transparent;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+  .nav li.active a, .nav li:hover a {
+    color: #f40;
+    border-bottom-color: #ff4400;
+    font-weight: bold;
+  }
+}
+
+/* 正文选项卡部分样式*/
+.notice .main {
+  ul {
+    display: none;
+  }
+  ul:nth-child(1) {
+    display: block;
+  }
+  li {
+    width: 50%;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    height: 14px;
+    overflow: hidden;
+  }
+  li.full {
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: #3c3c3c;
+  }
+  a.h {
+    color: #fd4500;
+  }
+}
+
+//淘宝网首页热卖单品样式
