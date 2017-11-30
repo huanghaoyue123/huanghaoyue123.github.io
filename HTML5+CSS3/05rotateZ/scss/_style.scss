@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #000;
+}
+
+@keyframes cube {
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes comsic1 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes comsic2 {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes comsic3 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.comsic-cube {
+  width: 700px;
+  height: 700px;
+  margin: auto;
+  margin-bottom: 170px;
+  position: relative;
+  .comsic {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -350px;
+    margin-top: -350px;
+  }
+  .comsic1 {
+    @extend .comsic;
+    background-image: url("../img/s01.png");
+    animation: comsic1 100s infinite linear;
+  }
+  .comsic2 {
+    @extend .comsic;
+    background-image: url("../img/s02.png");
+    animation: comsic2 50s infinite linear;
+  }
+  .comsic3 {
+    @extend .comsic;
+    background-image: url("../img/s03.png");
+    animation: comsic3 30s infinite linear;
+  }
+  .cube {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    animation: cube 10s infinite linear;
+    div {
+      width: 80px;
+      height: 80px;
+      border: 3px solid #0c9c31;
+      box-shadow: 0 0 80px #0c9c31;
+      position: absolute;
+      font-size: 42px;
+      line-height: 80px;
+      text-align: center;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 0 0 20px #fff;
+      &:nth-of-type(1) {
+        transform: translateY(-40px) rotateX(90deg);
+      }
+      &:nth-of-type(2) {
+        transform: translateY(40px) rotateX(90deg);
+      }
+      &:nth-of-type(3) {
+        transform: translateX(-40px) rotateY(90deg);
+      }
+      &:nth-of-type(4) {
+        transform: translateX(40px) rotateY(90deg);
+      }
+      &:nth-of-type(5) {
+        transform: translateZ(-40px);
+      }
+      &:nth-of-type(6) {
+        transform: translateZ(40px);
+      }
+    }
+  }
+  .text {
+    width: 700px;
+    height: 700px;
+    color: #fff;
+    position: relative;
+    div {
+      background: url("../img/left.png") no-repeat, url("../img/right.png") no-repeat right 10px;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      position: absolute;
+      border-radius: 2px;
+      padding: 10px;
+      font-size: 12px;
+      text-align: center;
+      min-width: 100px;
+      p {
+        margin-bottom: 5px;
+      }
+      strong {
+        display: block;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      &:nth-of-type(1) {
+        background: url("../img/left.png") no-repeat left 75px, url("../img/right.png") no-repeat right bottom;
+        background: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        left: 50%;
+        top: 60px;
+        margin-left: -72px;
+        &::after {
+          content: ">";
+          position: absolute;
+          transform: rotateZ(90deg);
+          bottom: -39px;
+          font-size: 52px;
+          left: 55px;
+          font-family: serif;
+        }
+      }
+      &:nth-of-type(2) {
+        right: 90px;
+        top: 200px;
+        strong {
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+      }
+      &:nth-of-type(3) {
+        right: 100px;
+        top: 400px;
+        strong {
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+        &::after {
+          content: "";
+          width: 60px;
+          height: 1px;
+          background: #fff;
+          display: block;
+          transform: rotateZ(25deg);
+          position: absolute;
+          top: -11px;
+          left: -55px;
+        }
+      }
+      &:nth-of-type(4) {
+        background: url(../img/left.png) left 55px no-repeat, url(../img/right.png) right bottom no-repeat;
+        background: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        bottom: 80px;
+        left: 50%;
+        margin-left: -38.5px;
+        &::after {
+          content: ">";
+          position: absolute;
+          transform: rotateZ(-90deg);
+          top: -40px;
+          left: 40px;
+          font-size: 52px;
+          font-family: serif;
+        }
+      }
+      &:nth-of-type(5) {
+        bottom: 120px;
+        left: 130px;
+        strong {
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+      }
+      &:nth-of-type(6) {
+        left: 110px;
+        top: 200px;
+        strong {
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
