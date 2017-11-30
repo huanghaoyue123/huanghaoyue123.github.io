@@ -1,0 +1,114 @@
+#footer {
+    //footer
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+
+    #qrcode {
+        //二维码
+        display: inline-block;
+
+        .qrcode-item {
+            float: left;
+        }
+
+        .qrcode-img {
+            float: left;
+            width: 60px;
+            height: 60px;
+        }
+
+        .qrcode-item-1 {
+            .qrcode-img {
+                background: url("../img/zbios.png");
+            }
+        }
+
+        .qrcode-item-2 {
+            margin-left: 3rem;
+
+            .qrcode-img {
+                background: url("../img/nuomi.png");
+            }
+        }
+
+        .qrcode-text {
+            float: left;
+            color: #999;
+            line-height: 2rem;
+            margin: 8px 0 0 10px;
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+                text-align: center;
+            }
+
+            strong {
+                color: #666;
+                font-weight: bold;
+            }
+
+            span {
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    #footbd {
+        //底部右侧文字
+        display: inline-block;
+        margin-left: 3rem;
+        line-height: 2rem;
+        color: #999;
+        text-align: left;
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #999;
+        }
+
+        i {
+            width: 14px;
+            height: 17px;
+            display: inline-block;
+            overflow: hidden;
+            background: url("../img/icons.png");
+        }
+
+        .about {
+            a {
+                margin-left: 2rem;
+
+                &.first {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .icpb {
+            .icon-icpb {
+                background-position: -600px -96px;
+                position: relative; //相对
+                top: 3px;
+            }
+        }
+
+        .jgwab {
+            .icon-jgwab {
+                background-position: -623px -96px;
+                position: relative; //相对
+                top: 3px;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

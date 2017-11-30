@@ -1,0 +1,257 @@
+/*!
+ * 
+ * w104
+ * 
+*/
+html {
+  font-size: 12px;
+  font-family: arial; }
+
+* {
+  box-sizing: border-box; }
+
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+body,
+ul {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fff; }
+
+.clearfix::after,
+form::after,
+ul:after {
+  display: table;
+  clear: both;
+  content: ""; }
+
+#content {
+  margin-top: 12%;
+  margin-bottom: 12%; }
+
+#logo {
+  margin-bottom: 20px; }
+  #logo img {
+    width: 270px;
+    height: 129px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+#search {
+  margin-bottom: 2rem; }
+  #search form {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto; }
+    #search form .btn,
+    #search form .s {
+      float: left; }
+    #search form input {
+      outline: none; }
+    #search form .s {
+      position: relative; }
+      #search form .s input {
+        border: 1px solid #b6b6b6;
+        border-right: none;
+        width: 500px;
+        height: 3rem;
+        padding: 0.5rem 3.5rem 0.5rem 0.5rem;
+        font-size: 1.25rem; }
+        #search form .s input:hover {
+          border-color: #999999; }
+        #search form .s input:focus {
+          border-color: #4791ff; }
+    #search form .btn input {
+      width: 100px;
+      height: 3rem;
+      font-size: 1.25rem;
+      color: #fff;
+      border: 0;
+      cursor: pointer;
+      background: #3385ff;
+      border-bottom: 1px solid #2d78f4; }
+      #search form .btn input:hover {
+        background: #317ef3; }
+    #search form .camera {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -8px;
+      height: 16px;
+      width: 18px;
+      background: #fff url("../img/camera.png") no-repeat;
+      cursor: pointer; }
+      #search form .camera:hover {
+        background-position: 0 -20px; }
+
+#nav {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 2rem 0; }
+  #nav li {
+    float: left;
+    list-style: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 2rem; }
+  #nav a {
+    color: #333;
+    font-weight: bold;
+    line-height: 2rem;
+    font-size: 13px; }
+    #nav a:hover {
+      color: #00c; }
+    #nav a.login, #nav a.setting {
+      font-weight: 300; }
+    #nav a.nav-more {
+      display: inline-block;
+      padding: 0 5px;
+      background: #38f;
+      text-align: center;
+      overflow: hidden;
+      color: #fff;
+      font-weight: 300;
+      text-decoration: none; }
+
+#more {
+  display: none;
+  width: 88px;
+  min-height: 500px;
+  height: 100%;
+  border-left: 1px solid #e7e7e7;
+  position: absolute;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  z-index: 2;
+  right: 0;
+  top: 0; }
+  #more .title {
+    color: #333;
+    text-align: center;
+    height: 4rem;
+    line-height: 4rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    cursor: default;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto; }
+  #more .list {
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto; }
+    #more .list a {
+      display: block;
+      text-align: center;
+      height: 76px;
+      margin: 0 auto;
+      border-bottom: #f0f0f0 1px solid;
+      color: #666;
+      text-decoration: none;
+      overflow: hidden; }
+      #more .list a:hover {
+        text-decoration: underline; }
+    #more .list span {
+      width: 36px;
+      height: 36px;
+      display: block;
+      margin: 1rem auto 0.5rem;
+      background: url("../img/bdbri.png") no-repeat;
+      cursor: pointer; }
+      #more .list span.item-1 {
+        width: 40px;
+        background-position: -72px 0; }
+      #more .list span.item-2 {
+        background-position: -112px 0; }
+      #more .list span.item-3 {
+        background-position: -36px 0; }
+      #more .list span.item-4 {
+        background-position: -148px 0; }
+      #more .list span.item-5 {
+        background-position: -184px 0; }
+  #more .all {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    text-align: center; }
+    #more .all a {
+      color: #666; }
+
+#footer {
+  display: block;
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  overflow: hidden; }
+  #footer #qrcode {
+    display: inline-block; }
+    #footer #qrcode .qrcode-item {
+      float: left; }
+    #footer #qrcode .qrcode-img {
+      float: left;
+      width: 60px;
+      height: 60px; }
+    #footer #qrcode .qrcode-item-1 .qrcode-img {
+      background: url("../img/zbios.png"); }
+    #footer #qrcode .qrcode-item-2 {
+      margin-left: 3rem; }
+      #footer #qrcode .qrcode-item-2 .qrcode-img {
+        background: url("../img/nuomi.png"); }
+    #footer #qrcode .qrcode-text {
+      float: left;
+      color: #999;
+      line-height: 2rem;
+      margin: 8px 0 0 10px; }
+      #footer #qrcode .qrcode-text p {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center; }
+      #footer #qrcode .qrcode-text strong {
+        color: #666;
+        font-weight: bold; }
+      #footer #qrcode .qrcode-text span {
+        letter-spacing: 1px; }
+  #footer #footbd {
+    display: inline-block;
+    margin-left: 3rem;
+    line-height: 2rem;
+    color: #999;
+    text-align: left; }
+    #footer #footbd p {
+      margin-top: 0;
+      margin-bottom: 0; }
+    #footer #footbd a {
+      color: #999; }
+    #footer #footbd i {
+      width: 14px;
+      height: 17px;
+      display: inline-block;
+      overflow: hidden;
+      background: url("../img/icons.png"); }
+    #footer #footbd .about a {
+      margin-left: 2rem; }
+      #footer #footbd .about a.first {
+        margin-left: 0; }
+    #footer #footbd .icpb .icon-icpb {
+      background-position: -600px -96px;
+      position: relative;
+      top: 3px; }
+    #footer #footbd .jgwab .icon-jgwab {
+      background-position: -623px -96px;
+      position: relative;
+      top: 3px;
+      margin-right: 0.5rem; }
+
+@media (max-height: 600px) {
+  #footer {
+    position: static; } }

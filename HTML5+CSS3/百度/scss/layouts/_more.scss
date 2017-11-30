@@ -1,0 +1,93 @@
+#more {
+    //更多产品
+    display: none;
+    width: 88px;
+    min-height: 500px;
+    height: 100%;
+    border-left: 1px solid #e7e7e7;
+    position: absolute;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    // opacity: .5;//测试重叠度
+    .title {
+        //右侧顶部标题
+        color: #333;
+        text-align: center;
+        height: 4rem;
+        line-height: 4rem;
+        margin-top: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 13px;
+        cursor: default;
+        width: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .list {
+        //右侧图标部分
+        width: 70px;
+        margin-left: auto;
+        margin-right: auto;
+
+        a {
+            display: block;
+            text-align: center;
+            height: 76px;
+            margin: 0 auto;
+            border-bottom: #f0f0f0 1px solid;
+            color: #666;
+            text-decoration: none;
+            overflow: hidden;
+
+            &:hover {
+                text-decoration: underline; //鼠标滑过显示链接下划线
+            }
+        }
+
+        span {
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 1rem auto 0.5rem;
+            background: url("../img/bdbri.png") no-repeat;
+            cursor: pointer;
+
+            &.item-1 {
+                width: 40px;
+                background-position: -72px 0;
+            }
+
+            &.item-2 {
+                background-position: -112px 0;
+            }
+
+            &.item-3 {
+                background-position: -36px 0;
+            }
+
+            &.item-4 {
+                background-position: -148px 0;
+            }
+
+            &.item-5 {
+                background-position: -184px 0;
+            }
+        }
+    }
+
+    .all {
+        // 右侧底部全部产品>>
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        text-align: center;
+
+        a {
+            color: #666;
+        }
+    }
+}

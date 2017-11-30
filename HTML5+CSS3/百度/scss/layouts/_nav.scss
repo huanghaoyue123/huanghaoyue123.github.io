@@ -1,0 +1,43 @@
+#nav {
+    //头部导航
+    color: #fff;
+    position: absolute; //绝对定位
+    right: 0;
+    top: 0;
+    margin: 2rem 0;
+
+    li {
+        float: left;
+        list-style: none;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 2rem;
+    }
+
+    a {
+        color: #333;
+        font-weight: bold;
+        line-height: 2rem;
+        font-size: 13px;
+
+        &:hover {
+            color: #00c;
+        }
+
+        &.login,
+        &.setting {
+            font-weight: 300;
+        }
+
+        &.nav-more {
+            display: inline-block;
+            padding: 0 5px;
+            background: #38f;
+            text-align: center;
+            overflow: hidden;
+            color: #fff;
+            font-weight: 300;
+            text-decoration: none;
+        }
+    }
+}

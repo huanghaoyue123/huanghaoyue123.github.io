@@ -1,0 +1,31 @@
+html {
+    font-size: 12px;
+    font-family: arial;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+.clearfix::after,
+form::after,
+ul:after {
+    display: table;
+    clear: both;
+    content: "";
+}

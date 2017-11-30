@@ -1,0 +1,12 @@
+//当浏览器窗口高度小于600像素时
+@media (max-height: 600px) {
+    #footer {
+        position: static;
+    }
+}
+//当浏览器窗口宽度小于960像素时
+@media (max-width: 960px) {
+    #more {
+        // display: none!important;
+    }
+}
