@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.m{ width: 640px; height: 480px; background: url(img/h41301.png); line-height: 480px; font-size: 50px; color: #fff; text-align: center; margin: 0 auto; text-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 15px #fff; box-shadow: 0 0 5px, 0px 0px 10px #fff, 0px 0px 15px #fff;}
+		body{ background: #000; }
+	</style>
+</head>
+<body>
+	
+	<div class="m" id="m">
+			
+	</div>
+	<script>
+		var k=0;
+		var m=87;
+		function h (){
+			
+			if(k<=86){
+				k++
+				var j = k;
+			}
+			if(k>86){
+				m--
+				var j = m;
+
+			}
+			if(k>86&&m<1){
+				k=0
+				m=87
+			}
+			if(j<10){ 
+				j="0"+j
+				console.log(j)
+			}
+	       document.getElementById('m').style.background="url(img/h413"+j+".png)";
+            document.getElementById('m').innerText="范小汪的小土豆"
+		}
+		setInterval(h,50);
+	</script>
+</body>
+</html>
