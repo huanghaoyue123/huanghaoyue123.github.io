@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*最外层的轮播图插件选择器*/
+.unslider {
+  margin: auto; /*居中,调试用的*/
+  position: relative;
+  background: #999;
+  width: 520px;
+  height: 280px;
+  transition: .2s; /*过渡效果*/
+}
+
+/*鼠标经过父级的时候,显示上下翻页按钮*/
+.unslider:hover .unslider-arrow {
+  opacity: 1; /*透明度为1*/
+}
+
+.banner {
+}
+
+/*给每张轮播图设置宽度和高度*/
+.banner li {
+  width: 520px;
+  height: 280px;
+}
+
+/*上下翻页按钮的选择器*/
+.unslider-arrow {
+  opacity: 0; /*设置初始透明度为0*/
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: #fff; /*左右两侧,上下翻页的按钮,文字颜色改为白色*/
+  width: 24px;
+  height: 36px;
+  line-height: 36px; /*行高居中*/
+  margin-top: (-36px/2);
+  font-size: 18px; /*文字大小42像素*/
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  font-family: serif; /*设置一个合适的字体*/
+  overflow: hidden; /*溢出隐藏*/
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: .2s;
+}
+
+.unslider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*上一页按钮的选择器*/
+.unslider-arror.prev {
+}
+
+/*下一页按钮的选择器*/
+.unslider-arrow.next {
+  right: 0;
+}
+
+/*小圆点的选择器*/
+.unslider-nav {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  /*让小圆点居中显示整体的 nav宽度是像素 /2 */
+  margin-left: (-65px/2);
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 13px;
+  line-height: 13px;
+  border-radius: 10px;
+
+}
+
+/*选择单个小圆点*/
+.unslider-nav ol li {
+  width: 9px;
+  height: 9px;
+  background-color: #b7b7b7;
+  margin: 2px;
+  border: none;
+}
+
+/*焦点状态下的小圆点*/
+.unslider-nav ol li.unslider-active {
+  background-color: #ff4400;
+}
