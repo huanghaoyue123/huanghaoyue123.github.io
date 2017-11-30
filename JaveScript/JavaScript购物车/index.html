@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div class="container">
+
+    <h1>类似购物车的例子</h1>
+
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>商品信息</th>
+                    <th>单价</th>
+                    <th></th>
+                    <th>数量</th>
+                    <th></th>
+                    <th>总金额</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">iPhone 7</th>
+                    <td id="iphone7One">5388</td>
+                    <td>
+                        <button id="iphone7Jian" type="button" class="btn btn-default">-</button>
+                    </td>
+                    <td><input id="iphone7Add" type="number" class="form-control" value="1"></td>
+                    <td>
+                        <button id="iphone7Jia" type="button" class="btn btn-default">+</button>
+                    </td>
+                    <td id="iphone7To"></td>
+                </tr>
+                <tr>
+                    <th scope="row">iPhone 7 Plus</th>
+                    <td id="iphone7PlusOne">6388</td>
+                    <td>
+                        <button id="iphone7PlusJian" type="button" class="btn btn-default">-</button>
+                    </td>
+                    <td><input id="iphone7PlusAdd" type="number" class="form-control" value="1"></td>
+                    <td>
+                        <button id="iphone7PlusJia" type="button" class="btn btn-default">+</button>
+                    </td>
+                    <td id="iphone7PlusTo"></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td>总数</td>
+                    <td id="Add"></td>
+                    <td>合计</td>
+                    <td id="To"></td>
+                </tr>
+                </tbody>
+            </table>
+</div>
+
+<!-- JavaScript -->
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
