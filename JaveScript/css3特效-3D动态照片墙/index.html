@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{background:#b8e6b3;transition:background-color .8s}#content{width:1190px;margin:100px auto;display:flex;flex-wrap:wrap;justify-content:space-between;transform-style:preserve-3d;transform:perspective(1200px) rotateX(0deg) rotateY(0deg)}.box{width:150px;height:150px;position:relative;margin:12px 0;transition:.3s;transform-style:preserve-3d;transform:perspective(1200px) rotateX(0deg) rotateY(0deg)}.box div{width:150px;height:150px;text-align:center;color:#fff;position:absolute;left:0;top:0;border:10px solid #fff;box-sizing:border-box;overflow:hidden}.box:nth-child(1n) div{background:#f0f0f0 url(images/1.png) no-repeat center}.box:nth-child(2n) div{background:#f0f0f0 url(images/2.png) no-repeat center}.box:nth-child(3n) div{background:#f0f0f0 url(images/3.png) no-repeat center}.box div:nth-of-type(1){transform:translateZ(75px)}.box div:nth-of-type(2){transform:translateZ(-75px)}.box div:nth-of-type(3){transform:translateY(75px) rotateX(-90deg)}.box div:nth-of-type(4){transform:translateY(-75px) rotateX(90deg)}.box div:nth-of-type(5){transform:translateX(75px) rotateY(90deg)}.box div:nth-of-type(6){transform:translateX(-75px) rotateY(90deg)}.box span{display:block;width:70px;height:70px;position:absolute;right:-35px;bottom:-35px;border-radius:50%;text-indent:9%;line-height:45px;text-align:left;font-size:18px;font-family:"微软雅黑"}.box:nth-child(1n) span{background:#f8af8d}.box:nth-child(2n) span{background:#f8d18d}.box:nth-child(3n) span{background:#8df88d}
+		</style>
+		<script>
+			window.onload=function(){
+var content = document.getElementById("content");
+var divs = document.querySelectorAll(".box");
+var rot = ['rotateX(180deg)', 'rotateX(-180deg)', 'rotateY(180deg)', 'rotateY(-180deg)'];
+var colors = ['#F7E8ED', '#F2D9E6', '#ECC6DE', '#E0ECF5', '#DDF4DE', '#F0F1D5', '#EEDECD', '#B8E6B3', '#ABE3D8', '#E0E1F5', '#F7E8ED', '#F2D9E6', '#E0ECF5', '#DDF4DE', '#F0F1D5', '#EEDECD', '#B8E6B3', '#ABE3D8', '#DFD1F0', '#6161616'];
+for (var i = 0; i < divs.length; i++) {
+	divs[i].onmouseenter = function(ev) {
+		var css = rot[Math.round(Math.random() * (rot.length - 1))];
+		this.style.transform = 'perspective(1200px) translateZ(150px) ' + css;
+		document.body.style.background = colors[Math.round(Math.random() * (colors.length - 1))]
+	};
+	divs[i].onmouseleave = function() {
+		this.style.transform = '';
+		document.body.style.background = 'rgb(184,230,179)'
+	}
+}
+document.onmousemove = function(ev) {
+	var x = (0.5 - ev.clientY / window.innerHeight) * 15;
+	var y = (ev.clientX / window.innerWidth - 0.5) * 15;
+	content.style.transform = 'perspective(1200px) rotateX(' + x + 'deg) rotateY(' + y + 'deg)'
+};
+			};
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<div class="box">
+				<div><span>1</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>2</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>3</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>4</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>5</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>6</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>7</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>8</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>9</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>10</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>11</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>12</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>13</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>14</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>15</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>16</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>17</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>18</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>19</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>20</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>21</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>22</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>23</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>24</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>25</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>26</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>27</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>28</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>
