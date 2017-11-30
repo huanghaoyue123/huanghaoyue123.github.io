@@ -1,0 +1,231 @@
+/*!
+ * shengbangshenghua
+*/
+.top {
+  border-bottom: 3px solid #7719a1;
+  width: 100%;
+  height: 5px; }
+
+.container-fluid > .navbar-header a:hover {
+  background: #ccc;
+  color: #fff; }
+
+.navbar-nav.navbar-right li a:hover {
+  background: #ccc;
+  color: #fff; }
+
+.navbar-default {
+  background-color: #fff;
+  border: #fff;
+  color: #293a46; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #293a46;
+  font-size: 12px; }
+
+.navbar-default .navbar-brand {
+  color: #293a46;
+  font-size: 12px; }
+
+.container .row .col-md-12 {
+  text-align: center; }
+
+banner h1 {
+  font-size: 30px;
+  color: #293a46; }
+
+banner h2 {
+  font-size: 13px;
+  color: #697176; }
+
+banner a {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 3px;
+  background-color: #6b15a1;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: bold; }
+
+banner a:hover {
+  background: #e6c5f7;
+  color: #6b15a1;
+  text-decoration: none; }
+
+.center .col-md-4 {
+  text-align: center; }
+
+.center .col-md-4 img {
+  margin-bottom: 24px;
+  margin-top: 120px; }
+
+.center .col-md-4 p {
+  font-size: 18px;
+  color: #293a46; }
+
+.center .col-md-4 span {
+  color: #6d7176;
+  font-size: 10px; }
+
+.test p {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 120px;
+  font-weight: bold;
+  margin-bottom: 65px; }
+
+.test .col-md-4 {
+  width: 31%;
+  border: 2px #dddddd solid;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.test .col-md-12 {
+  padding-right: 0; }
+
+.test .col-md-4 ul {
+  margin-left: -40px; }
+
+.test .col-md-4 ul li {
+  list-style: none; }
+
+.test .col-md-4 ul li:nth-child(1) {
+  margin-bottom: 10px; }
+
+.test .col-md-4 .img {
+  background-image: url(../img/insta-2.jpg);
+  width: 100%;
+  height: 150px;
+  background-size: cover; }
+
+.test .col-md-4 .img1 {
+  background-image: url(../img/insta-1.jpg);
+  width: 100%;
+  height: 150px;
+  background-size: cover; }
+
+.test .col-md-4 .img2 {
+  background-image: url(../img/insta-3.jpg);
+  width: 100%;
+  height: 150px;
+  background-size: cover; }
+
+.test .col-md-4 img {
+  width: 102px;
+  height: 102px;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  margin-top: -50px; }
+
+.test .col-md-4 a {
+  padding: 10px 17px;
+  margin: 0;
+  background-color: #6b15a1;
+  display: inline-block;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: none;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.test .col-md-4 a:hover {
+  background: #e6c5f7;
+  color: #6b15a1;
+  text-decoration: none; }
+
+.bottom .container {
+  margin-top: 140px;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 83px; }
+
+.bottom .col-md-12 .xian {
+  width: 100%;
+  overflow: hidden;
+  border: 1px #dddddd solid;
+  border-top: 5px #6b15a1 solid; }
+
+.bottom .col-md-12 .xian ul {
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  float: left; }
+
+.bottom .col-md-12 .xian ul li {
+  list-style: none; }
+
+.bottom .col-md-12 .xian ul li:nth-child(1) {
+  font-weight: bold; }
+
+.bottom .col-md-12 .xian a {
+  padding: 13px 25px;
+  background-color: #6b15a1;
+  border-radius: 3px;
+  display: inline-block;
+  float: right;
+  margin-top: 30px;
+  margin-right: 40px;
+  color: #fff;
+  font-weight: bold; }
+
+.bottom .col-md-12 .xian a:hover {
+  background: #e6c5f7;
+  color: #6b15a1;
+  text-decoration: none; }
+
+footer {
+  padding-bottom: 45px; }
+
+footer .container .row {
+  text-align: center; }
+
+footer .container .row ul {
+  display: inline-block; }
+
+footer .container .row ul li {
+  list-style: none;
+  float: left;
+  padding: 0 12px; }
+
+footer .container .row ul li a {
+  color: #6b15a1; }
+
+footer .container .row ul li a:hover {
+  color: #e6c5f7;
+  text-decoration: none; }
+
+@media (max-width: 1200px) {
+  .container {
+    width: 960px; } }
+
+@media (max-width: 960px) {
+  .container {
+    width: 720px; }
+  .test .col-md-4 {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px; }
+  .test .col-md-12 {
+    margin-left: -35px; } }
+
+@media (max-width: 720px) {
+  .container {
+    width: 320px; }
+  .test .col-md-4 {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px; }
+  .test .col-md-12 {
+    margin-left: -35px; }
+  .bottom .col-md-12 .xian a {
+    padding: 13px 25px;
+    border-radius: 3px;
+    float: left;
+    margin: 15px 0;
+    text-align: center;
+    margin-left: 80px;
+    font-weight: 700; } }
