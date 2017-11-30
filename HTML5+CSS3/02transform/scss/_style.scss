@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cosmic-cube{
+  background-color: black;
+
+  height: 100vh;
+  /*相对于视窗的高度*/
+  display: flex;
+  /*指定为Flex布局意为"弹性布局"*/
+  align-items: center;
+  /*属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。项目位于容器的中心。*/
+  justify-content: center;
+  /*用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。项目位于容器的中心。*/
+}
+.cosmic {
+  position: absolute;
+  width: 700px;
+  height: 548px;
+  left:50%;
+  top:50%;
+  margin-left: -350px;
+  margin-top: -274px;
+  background-image: url("../img/circle.jpg");
+  //perspective: 1200px;   //设置从何处查看一个元素的角度
+}
+.cube{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  transform-style: preserve-3d;    //容器内的元素随着容器一起转
+  transform-origin: center center;
+  transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  animation: rotate-frame 10s infinite linear;    //应用关键帧动画
+  //animation: myfirst 5s;                   //调用动画
+  //animation-delay:2s;                     //等待几秒播放
+  //animation-iteration-count: infinite;     //无限播放
+  //animation-direction:reverse;          //反向播放
+  //animation-name: rotate-frame;        规定 @keyframes 动画的名称。
+  //animation-duration: 10s;             规定动画完成一个周期所花费的秒或毫秒。默认是 0。
+  //animation-timing-function: linear;   规定动画的速度曲线。默认是 "ease"。
+  //animation-delay: initial;            规定动画何时开始。默认是 0。
+  //animation-iteration-count: infinite; 规定动画被播放的次数。默认是 1。
+  //animation-direction: initial;        规定动画是否在下一周期逆向地播放。默认是 "normal"。
+  //animation-fill-mode: initial;        规定对象动画时间之外的状态。
+  //animation-play-state: initial;       规定动画是否正在运行或暂停。默认是 "running"。
+}
+
+@keyframes rotate-frame {
+  100%{
+    transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+.cube div {
+  width: 80px;
+  height: 80px;
+  font-size: 42px;
+  color: #ffffff;
+  position: absolute;
+  border: 3px solid #19decd;
+  box-shadow: 0 0 80px #19decd;
+  text-shadow: 0 0 20px #fff;
+  text-align: center;
+  line-height: 80px;
+}
+.cube div:nth-of-type(1) {
+  transform: rotateX(90deg) translateZ(40px)    ; // 沿X轴旋转90度
+}
+.cube div:nth-of-type(2){
+  transform: rotateX(90deg) translateZ(-40px);
+}
+.cube div:nth-of-type(3) {
+  transform: rotateY(90deg) translateZ(-40px)
+}
+.cube div:nth-of-type(4) {
+transform: rotateY(90deg) translateZ(40px);
+}
+.cube div:nth-of-type(5) { //前
+transform: rotateZ(90deg) translateZ(40px) ;
+}
+.cube div:nth-of-type(6) { //后
+transform: rotateZ(90deg) translateZ(-40px);
+}

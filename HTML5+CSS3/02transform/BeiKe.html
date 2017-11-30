@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .comsic-cube {
+            background-color: #000;
+            display: flex;             /*弹性布局*/
+            height: 100vh;             /*占满浏览器高度*/
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .comsic {
+            width: 700px;
+            height: 548px;
+            background-image: url("img/circle.jpg");
+            position: relative;
+        }
+        
+        .cube {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -40px;
+            margin-top: -40px;
+            transform-style: preserve-3d;       /*被嵌套元素如何在3D空间中显示*/
+            transform-origin: center center;    /*元素的位置*/
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);        /*3D转换角度*/
+            animation: sss 10s infinite linear;    /*动画*/
+        }
+        
+        @keyframes sss {
+            100% {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);     /*定义动画*/
+            }
+        }
+        
+        .cube div {
+            width: 80px;
+            height: 80px;
+            color: #ffffff;
+            font-size: 42px;
+            line-height: 80px;
+            text-align: center;
+            position: absolute;
+            border: 3px solid #19decd;
+            box-shadow: 0 0 80px #19decd;
+            text-shadow: 0 0 20px #fff;
+        }
+        
+        .cube div:nth-of-type(1) {
+            transform: translateX(40px) rotateY(90deg);   /*3D转换      旋转角度*/
+        }
+        
+        .cube div:nth-of-type(2) {
+            transform: translateX(-40px) rotateY(90deg);
+        }
+        
+        .cube div:nth-of-type(3) {
+            transform: translateY(-40px) rotateX(90deg);
+        }
+        
+        .cube div:nth-of-type(4) {
+            transform: translateY(40px) rotateX(90deg);
+        }
+        
+        .cube div:nth-of-type(5) {
+            transform: translateZ(40px);                 /*3D转换*/
+        }
+        
+        .cube div:nth-of-type(6) {
+            transform: translateZ(-40px);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="comsic-cube">
+        <!-- 宇宙魔方 -->
+        <div class="comsic">
+            <!-- 宇宙 -->
+            <div class="cube">
+                <!-- 魔方 -->
+                <div>6</div>
+                <div>6</div>
+                <div>6</div>
+                <div>6</div>
+                <div>6</div>
+                <div>6</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

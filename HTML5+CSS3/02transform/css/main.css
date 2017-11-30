@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/*!
+ * 
+ * 盛邦升华
+ * 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.cosmic-cube {
+  background-color: black;
+  height: 100vh;
+  /*相对于视窗的高度*/
+  display: flex;
+  /*指定为Flex布局意为"弹性布局"*/
+  align-items: center;
+  /*属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。项目位于容器的中心。*/
+  justify-content: center;
+  /*用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。项目位于容器的中心。*/ }
+
+.cosmic {
+  position: absolute;
+  width: 700px;
+  height: 548px;
+  left:50%;
+  top:50%;
+  margin-left: -350px;
+  margin-top: -274px;
+  background-image: url("../img/circle.jpg"); }
+
+.cube {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  animation: rotate-frame 10s infinite linear; }
+
+@keyframes rotate-frame {
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); } }
+
+.cube div {
+  width: 80px;
+  height: 80px;
+  font-size: 42px;
+  color: #ffffff;
+  position: absolute;
+  border: 3px solid #19decd;
+  box-shadow: 0 0 80px #19decd;
+  text-shadow: 0 0 20px #fff;
+  text-align: center;
+  line-height: 80px; }
+
+.cube div:nth-of-type(1) {
+  transform: rotateX(90deg) translateZ(40px); }
+
+.cube div:nth-of-type(2) {
+  transform: rotateX(90deg) translateZ(-40px); }
+
+.cube div:nth-of-type(3) {
+  transform: rotateY(90deg) translateZ(-40px); }
+
+.cube div:nth-of-type(4) {
+  transform: rotateY(90deg) translateZ(40px); }
+
+.cube div:nth-of-type(5) {
+  transform: rotateZ(90deg) translateZ(40px); }
+
+.cube div:nth-of-type(6) {
+  transform: rotateZ(90deg) translateZ(-40px); }

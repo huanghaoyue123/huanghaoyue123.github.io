@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .comsic-cube{
+            background-color: #000;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ._comsic{
+           width: 700px;height: 548px;
+            background-image: url("img/circle.jpg");
+        }
+        .cube{
+            width: 100px;
+            height: 100px;
+            transform-style:preserve-3d;
+            transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            animation: sss 10s infinite linear;
+        }
+        @keyframes sss{
+            100%{
+                transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+        .cube div{
+            width: 100px;
+            height: 100px;
+            border:3px solid #19decd;
+            box-shadow: 0 0 80px #19decd;
+            position: absolute;
+            color:#fff;
+        }
+        .cube div:nth-of-type(1){
+            transform:translateY(-50px) rotateX(90deg)
+        }
+        .cube div:nth-of-type(2){
+            transform: translateY(50px) rotateX(90deg);
+        }
+        .cube div:nth-of-type(3){
+            transform: translateX(-50px) rotateY(90deg);
+        }
+        .cube div:nth-of-type(4){
+            transform: translateX(50px) rotateY(90deg);
+        }
+        .cube div:nth-of-type(5){
+            transform: translateZ(-50px);
+        }
+        .cube div:nth-of-type(6){
+            transform: translateZ(50px);
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="comsic-cube">
+<!--       宇宙魔方-->
+        <div class="comsic">
+<!--           宇宙-->
+            <div class="cube">
+<!--               魔方-->
+                <div>6</div>
+                <div>6</div>
+                <div>6</div>
+                <div>6</div>
+                <div>6</div>
+                <div>6</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
