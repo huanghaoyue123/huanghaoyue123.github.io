@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+//
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: 0 0
+  }
+  to {
+    background-position: -100% 0
+  }
+}
+
+//
+#app {
+  width: 300px;
+  margin: auto;
+  margin-top: 5%;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    a {
+      color: #000000;
+    }
+  }
+  button {
+    cursor: pointer;
+  }
+  .header {
+    margin-bottom: 20px;
+    input {
+      float: left;
+      height: 40px;
+      padding: 5px;
+      width: 80%;
+      outline: none;
+      border: 1px solid #ccc;
+      border-right: none;
+      //
+      //background-image: -webkit-linear-gradient(left, #cddc39, #ff9800 25%, #cddc39 50%, #ff9800 75%, #cddc39) !important;
+      background-image: -webkit-linear-gradient(left,red,green 25%,red 50%,green 75%,red)!important;      -webkit-text-fill-color: transparent !important;
+      -webkit-background-clip: text !important;
+      -webkit-background-size: 200% 100% !important;
+      -webkit-animation: masked-animation 1s infinite linear !important;
+    }
+    button {
+      float: left;
+      height: 40px;
+      width: 20%;
+      border: 1px solid #ccc;
+      background-color: #2196f3;
+      color: #ffffff;
+      &:hover {
+        background-color: #1966a3;
+      }
+    }
+  }
+  .header::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .main {
+    li {
+      list-style: none;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: -1px;
+      &:first-child {
+        margin-top: 0;
+      }
+      span {
+        width: 80%;
+        display: block;
+        float: left;
+        word-break: break-all;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        //
+        background-image: -webkit-linear-gradient(right,red,green 25%,red 50%,green 75%,red)!important;        -webkit-text-fill-color: transparent !important;
+        -webkit-background-clip: text !important;
+        -webkit-background-size: 200% 100% !important;
+        -webkit-animation: masked-animation 2s infinite linear !important;
+      }
+      button {
+        width: 20%;
+        display: block;
+        float: left;
+        border:1px solid #ccc;
+        outline: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        &:hover{
+          background-color: #999;
+        }
+      }
+    }
+  }
+  .main::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .main li::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
