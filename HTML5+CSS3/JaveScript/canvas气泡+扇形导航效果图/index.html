@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				overflow-x: hidden;
+				background:#000 url(images/logo.png) 100px 100px no-repeat;
+			}
+			#canvas{
+				margin: 0;
+				padding: 0;
+			}
+			#nav{
+				width: 130px;
+				height: 400px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -75px;
+				margin-top: -200px;
+				transition: 1s;
+				transform-origin: 25px 375px;
+				background: #000;
+			}
+			#nav li{
+				position: absolute;
+				left: 0;
+				top: 0;
+				list-style: none;
+				transition: 1s;
+				transform-origin: 25px 375px;
+				box-shadow: -1px -1px 3px rgba(0,0,0,0.1), 8px 8px 12px rgba(0,0,0,0.4), inset 0 3px 0 rgba(255, 255, 255, 0.2);
+			}
+		</style>
+		<script>
+        window.onload = function() {
+	var e = document.getElementById("canvas");
+	e.width = document.documentElement.clientWidth;
+	e.height = document.documentElement.clientHeight + 360;
+	var g, m = "#69D2E7 #A7DBD8 #E0E4CC #F38630 #FA6900 #FF4E50 #F9D423".split(" "),
+		a = [],
+		e = document.getElementById("canvas"),
+		n = e.getContext("2d"),
+		h = !0;
+	e.onmousemove = function(f) {
+		function d() {
+			n.clearRect(0, 0, e.width, e.height);
+			for (var c = 0; c < a.length; c++) if (a[c].x += 8 * a[c].vx, a[c].y += 8 * a[c].vy, a[c].r *= .94, a[c].index = c, 1 >= a[c].r) a.splice(a[c].index, 1);
+			else {
+				var f = a[c],
+					b = n;
+				b.beginPath();
+				b.arc(f.x, f.y, f.r, 0, 2 * Math.PI);
+				b.globalCompositeOperation = "lighter";
+				b.fillStyle = f.color;
+				b.fill()
+			}
+			a.length || (clearInterval(g), h = !0)
+		}
+		for (var b = 0; 2 > b; b++) a.push({
+			r: Math.round(35 * Math.random() + 10),
+			x: f.clientX + Math.round(10 * Math.random() + -5),
+			y: f.clientY + Math.round(10 * Math.random() + -5) + window.pageYOffset,
+			vx: Math.random() - .5,
+			vy: Math.random() - .5,
+			color: m[Math.round(Math.random() * m.length)]
+		}), 300 < a.length && a.shift();
+		h && (clearInterval(g), g = setInterval(d, 30), h = !1)
+	};
+	var d = document.getElementById("nav").querySelectorAll("li"),
+		k = !0;
+	d[d.length - 1].onclick = function() {
+		for (var a = 0; a < d.length; a++) {
+			d[a].index = a;
+			var e = a - d.length / 2;
+			d[a].style.transform = "rotate(" + (k ? 15 * e : 360) + "deg)"
+		}
+		k = !k
+	};
+	for (var l = 0; l < d.length - 1; l++) d[l].onclick = function() {
+		this.style.transform = "rotate(0deg)";
+		for (var a = 15, e = 0, b = this.index - 1; 0 <= b; b--) d[b].style.transform = "rotate(" + (e -= 15) + "deg)";
+		for (b = this.index + 1; b < d.length; b++) d[b].style.transform = "rotate(" + (a += 15) + "deg)"
+	}
+};
+        
+        </script>
+	</head>
+	<body>
+		<div id="sector">
+			<canvas id="canvas" width="" height=""></canvas>
+			<div id="nav">
+				<ul>
+					<li><img src="images/img1.png" alt="" /></li>
+					<li><img src="images/img2.png" alt="" /></li>
+					<li><img src="images/img3.png" alt="" /></li>
+					<li><img src="images/img4.png" alt="" /></li>
+					<li><img src="images/img5.png" alt="" /></li>
+					<li><img src="images/img6.png" alt="" /></li>
+					<li><img src="images/img7.png" alt="" /></li>
+					<li><img src="images/img8.png" alt="" /></li>
+					<li><img src="images/img9.png" alt="" /></li>
+					<li><img src="images/img10.png" alt="" /></li>
+					<li><img src="images/img11.png" alt="" /></li>
+					<li><img src="images/img13.png" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
