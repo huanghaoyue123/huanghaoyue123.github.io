@@ -1808,6 +1808,7 @@ button {
   color: #000; }
 
 #submit {
+    margin-left: 178px;
   width: 84px;
   background: #ba8559;
   border-radius: 2px;
@@ -1872,7 +1873,11 @@ button {
     display: none; } }
 
 @media (max-width: 960px) {
+    #submit{
+        margin-left: 140px;
+    }
   .container {
+      overflow: hidden;
     width: 720px; }
   .banner img {
     width: 100%;
@@ -1993,7 +1998,7 @@ button {
   .banner img {
     height: 205px; }
   .show {
-    height: 4000px; }
+    height: 4130px; }
   .inside .container .inside-left .inside-sml {
     left: -213px; }
   .box-news .fontnews .comstyle .rim1 {
