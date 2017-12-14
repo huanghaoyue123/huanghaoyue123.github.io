@@ -1,58 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="index.css"> </head>
-
+    <title>百度</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #app{
+            width: 450px;
+            margin: auto;
+            background: #f8f8f8;
+        }
+        @media(max-width: 720px){
+            #app{
+                width:100%;
+            }
+            header{
+                padding-left:10px;
+                padding-right:10px;
+            }
+        }
+    </style>
+</head>
 <body>
-   
-    <div class="text">
-        <div id="big">
-            <nav id="top">
-                <my-nav></my-nav>
-            </nav>
-            <div id="main">
-                <my-main></my-main>
-            </div>
-            <div id="list">
-                <ul>
-                    <li v-for="list in lists">
-                        <a href="#"><img v-bind:src="list.imgUrl" alt="">
-                            <p>{{list.message}}</p>
-                        </a>
-                    </li>
-                </ul>
-                <div id="sml">
-                    <my-sml></my-sml>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="center">
-        <div id="container">
-            <div id="code">
-                <ul>
-                    <li v-for="l in ls">
-                        <a href="#">
-                            <h3>{{l.message}}</h3>
-                            <div id="tupian"> <img v-bind:src="l.imgurl" alt=""> </div>
-                            <p>{{l.text}}<span>{{l.date}}</span><img style="position: absolute;" v-bind:src="l.imageurl" alt=""><span>{{l.mess}}</span></p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div id="bottom">
-            <my-bottom></my-bottom>
-        </div>
-    </footer>
-    <script src="node_modules/vue/dist/vue.js"></script>
-    <script src="script.js"></script>
-</body>
+<div id="app">
+ <app></app>
+</div>
 
+<script src="dist/build.js"></script>
+</body>
 </html>
